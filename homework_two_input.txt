@@ -1,0 +1,31 @@
+A sample memo which includes many different e-mail addresses.
+These include joe@gmail.com, as well as some other ones
+like jackie@yahoo.com one@Xyz123.net and michael.smith@hotmail.com
+and of course, something_something@gmail.com
+this is repeated multiple times...
+xxx@anOther.org as well as too@xyz123.net
+
+A sample memo which includes many different e-mail addresses.
+These include mike@Gmail.com, as well as some other ones
+These include joe@gmail.com, as well as some other ones
+like jackie@yahoo.com and michael.smith@hotmail.com
+and of course, something_something@gmail.com
+this is repeated multiple times...
+
+Somehing some@yAhOO.com and michael.smith@hotmail.com
+A sample memo which includes many different e-mail addresses.
+These include joe@gmail.com, as well as some other ones
+like jackie@yahoo.com and michael.smith@hotmAil.com
+and of course, something_something@gmail.com
+this is repeated multiple times...
+and of course, something_something@gmAil.com
+
+
+A sample memo which includes many different e-mail addresses.
+These include joe@gmail.com, as well as some other ones
+like jackie@yahoo.com and michael.smith@hotmail.com
+and of course, something_something@gmail.com
+this is repeated multiple times...
+this@blah.org and that@another.net are things to consider too. 
+
+But, like they say.something@Blah.org and ok@hotmail.com
