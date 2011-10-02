@@ -4,13 +4,17 @@ Course
 Program:
   Homework 2
 
-Developers:
-  Jim Schweiger   -- jim.schweiger@gmail.com
-  James Syvertsen -- syvertsj.jhu@gmail.com
-
 Usage:
   From command line type:
     # ruby homework2.rb [filename] [delimeter] [version]
+
+  Using graphical file manager or desktop on Windows, 
+  double-click on homework2.rb, keeping the 
+  homework_two_input.txt in the same directory.
+  To do this on a *nix system, it will be necessary to
+  prepend the interpreter path or "#!/bin/env ruby" to
+  the homework2.rb file. Otherwise, a right-click and 
+  selection of "open with..." will be necessary.
 
 Description:
   Extract, sort, and display domain names from text file.
@@ -23,7 +27,7 @@ Design(s):
   (ie: using the dos 'pause' command to keep the terminal from closing
   when running using a double-click.
 
-  A text file, "homework_two_test.txt" is provided and will be read by 
+  A text file, "homework_two_input.txt" is provided and will be read by 
   default if the file name is not provided on the command line. A different
   file may be provided as the first argument. 
   The second optional command argument is a delimeter, which, by default,
