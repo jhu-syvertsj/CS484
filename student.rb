@@ -2,21 +2,25 @@
 class Student
 
   attr_accessor :student_id, :first_name, :last_name 
-  attr_accessor :city, :state, :email, :gender, :pounds, :gpa, :taking_courses
+  attr_accessor :city, :state, :email, :gender, :pounds 
+  attr_accessor :gpa, :taking_courses
 
-  # empty constructor (use block initializer) 
+  # (using block initializer)
   def initialize
+    yield self if block_given?
   end
 
   def to_s
+    @course_str = "\nCourses: #{taking_courses}" unless taking_courses.empty? 
+    "Name: #{first_name} #{last_name} (#{gender} from #{city}, #{state}, weight: #{pounds}, GPA: #{gpa}) #{@course_str}"
   end
 
-  # use student_id attribute
   def eql?(another) 
+    student_id.eql?(another.student_id)
   end
 
-  # use student_id attribute
   def hash
+    student_id.hash
   end
 
 end

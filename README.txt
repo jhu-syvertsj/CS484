@@ -11,10 +11,17 @@ Description:
   course.rb            -- defines Course class
   student.rb           -- defines Student class
   db_api.rb            -- defines DbApi class API to select yaml records 
-  db_client.rb         -- (provided) will use methods from DbApi
+  db_client.rb         -- (provided) will use methods from DbApi class
+  homework3UI          -- ruby Tk interface to launch db_generator.rb and db_client.rb
 
 Run: 
-  # ruby db_generator.rb [csv file]
+  # ruby homework3UI.rb
+
+  To generate yaml file:
+  # ruby db_generator.rb 
+
+  To query yaml database:
+  # ruby db_client.rb
 
   (All files must be in the same directory)
 
