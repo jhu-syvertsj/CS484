@@ -5,46 +5,58 @@
     homework3
 
   Description:
-    extract student data from csv text file and generate yml file with data
+    extract student data from csv text file and generate yaml file with data
 
   Run:
-    # ruby db_generator.rb [csv file]
+    # ruby db_generator.rb
 
-  Usage:
-    - csv file argument is optional
-    - arg 0: input file will be "students.csv" by default
 =end
 
 require_relative "student"
+require_relative "course"
+require_relative "db_api"
+require 'yaml'
+require 'csv'
 
-class DbGenerator
+# array of courses
+courses = Array.new
+courses << Course.new("Ruby on Rails", "605.484") 
+courses << Course.new("System Programming", "605.414") 
+courses << Course.new("Enterprise Java", "605.784") 
+courses << Course.new("Distributed Objects", "605.781") 
 
-  def initialize(file, del)
-    @students = Student.new
-    @filename  = file
-    @delimeter = del
+#puts "courses: "
+#courses.each {|c| puts c.to_s }
+
+reader = CSV.open("students.csv", "r")
+reader.shift
+
+students = Array.new 
+reader.each_with_index do |row,index|
+    students << Student.new do |st| 
+      st.student_id     = index +=1 
+      st.first_name     = row[0]
+      st.last_name      = row[1]
+      st.city           = row[3]
+      st.state          = row[4]
+      st.email          = row[6]
+      st.gender         = row[7]
+      st.pounds         = row[9].to_i
+      st.gpa            = (2.0 + 2 * rand).round(2) 
+      st.taking_courses = rand(5)
   end
-
-  def parse_csv
-  end
-
-  def main
-    parse_csv
-  end
-
 end
 
+students.each { |s| puts s.to_s }
 
-if __FILE__ == $0
-  /linux/i =~ RUBY_PLATFORM ? host_os = "Linux" : host_os = "Windows"
-  if host_os.eql?("Windows")
-    system('pause')
-    system('cls')
-  else
-    system('')
-  end
-  ( ARGV[0] and File.exists?(ARGV[0]) ) ? filename = ARGV[0] : filename = "students.csv" 
-  DbGenerator.new(filename, ',').main 
-  host_os.eql?("Windows") ?  system('pause') : system('')
-end
+exit 99
+
+# serialize student data into yaml file
+File.open("university_db.yml", "w") {|file| YAML.dump(students, file) }
+
+# populate database using yaml file 
+db = DbApi.new("university_db.yml")
+
+# test DbApi methods using db_client:
+system('ruby ./db_client')
 
