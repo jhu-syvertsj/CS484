@@ -39,7 +39,7 @@ class DbGenerator
       st.gender         = row[7]
       st.pounds         = row[9].to_i
       st.gpa            = (2.0 + 2 * rand).round(2) 
-      st.taking_courses = courses.sample(rand(5)).join
+      st.taking_courses = courses.sample(rand(5)).join(", ")
     end
   end
 
