@@ -12,7 +12,7 @@ class Student
 
   def to_s
     @course_str = "\nCourses: #{taking_courses}" unless taking_courses.empty? 
-    "Name: #{first_name} #{last_name} (#{gender} from #{city}, #{state}, weight: #{pounds}, GPA: #{gpa}) #{@course_str}"
+    "Name: #{first_name} #{last_name} (#{gender} from #{city}, #{state}, weight: #{pounds.to_f}, GPA: #{gpa}) #{@course_str}"
   end
 
   def eql?(another) 

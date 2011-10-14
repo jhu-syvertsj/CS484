@@ -6,9 +6,14 @@ class DbApi
 
   @@students ||= YAML.load_file("university_db.yml")
 
+  # expecting the following:
+  # 1. a query for a student attribute
+  # 2. two arguments: either a regex or numerical comparator and the comparison
+
   def self.method_missing(method, *args)
     if method.to_s =~ /^select_(\w*)/i
       query = $1.split(/_/)
+      puts "query: #{query}, arguments: #{args}"
       case query.last
         when "gender" 
           @@students.select {|s| s.gender.downcase.eql?(args.last.downcase) }
