@@ -36,9 +36,9 @@ db_client2 = TkButton.new (root) do
   pack
 end
 
-db_client = TkButton.new (root) do 
-  text "Run DB Client"
-  command { system("ruby db_client.rb") }
+recipe = TkButton.new (root) do 
+  text "Run RESTful API Client for Recipes"
+  command { system("ruby recipe.rb") }
   #pack('padx'=>1, 'pady'=>5, 'side'=>'left')
   pack
 end

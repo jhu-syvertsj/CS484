@@ -23,7 +23,9 @@ Run:
 
   To query yaml database:
   # ruby db_client2.rb
-  # ruby db_client.rb
+
+  To run RESTful api client:
+  # ruby recipe.rb
 
   (All files must be in the same directory)
 
