@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  task_title: MyString
+  description: MyString
+  due_date: 2011-11-02
+  todo_list: 
+
+two:
+  task_title: MyString
+  description: MyString
+  due_date: 2011-11-02
+  todo_list: 
