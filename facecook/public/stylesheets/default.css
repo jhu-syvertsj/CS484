@@ -1,0 +1,17 @@
+
+.special_link { text-decoration:none; color:blue; }
+.special_link:hover { text-decoration:underline; }
+
+table { border-collapse:collapse; }
+/*table, td, th { border:1px solid #00ff66; }*/
+/*th { background-color: #00ff66; color:white; font-size:large; }*/
+table, td, th { border:1px solid:tan; }
+th { background-color:tan; color:maroon; font-size:large; }
+
+td { padding:10px; }
+tr:nth-child(odd)  { background-color:#f0f8ff; }
+tr:nth-child(even) { background-color:#ccffcc; }
+
+/* .even { background-color: #ccffcc; } */
+/* .odd { background-color:#f0f8ff; }   */
+

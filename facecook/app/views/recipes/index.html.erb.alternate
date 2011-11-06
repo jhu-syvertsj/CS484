@@ -1,0 +1,18 @@
+
+<h1>Recipes for <%= @keyword %></h1>
+
+<table border="1">
+  <tr>
+    <th colspan="2">Title</th>
+    <th>Ingredients</th>
+  </tr>
+  <% @recipes.each do |rec| %>
+    <tr class='<% cycle("even", "odd") %>'>
+      <td><a href="<%= rec["href"] %>"><IMG SRC="<%= rec["thumbnail"] %>"</a></td>
+      <td><a href="<%= rec["href"] %>" target=""><%= rec["title"] %>"</a></td>
+      <td><%= rec["ingredients"] %></td>
+    </tr>
+  <% end %>
+</table> 
+
+<p>Time now is <%= Time.now %></p>
