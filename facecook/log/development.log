@@ -4020,3 +4020,405 @@ Started GET "/?keyword=pie" for 127.0.0.1 at 2011-11-05 20:13:04 -0400
   Parameters: {"keyword"=>"pie"}
 Rendered recipes/index.html.erb within layouts/application (8.0ms)
 Completed 200 OK in 186ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at c:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:14:18 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (215.0ms)
+Completed 500 Internal Server Error in 1723ms
+
+ActionView::Template::Error (undefined method `srftime' for nil:NilClass):
+    15:   <% end %>
+    16: </table> 
+    17: 
+    18: <p>Time now is <%= formatted_time %></p>
+    19: <!-- <p>Time now is <%= Time.now %></p> -->
+  app/helpers/recipes_helper.rb:4:in `formatted_time'
+  app/views/recipes/index.html.erb:18:in `_app_views_recipes_index_html_erb__512874383_37246296__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:14:37 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 781ms
+
+ActionView::Template::Error (undefined method `srftime' for nil:NilClass):
+    15:   <% end %>
+    16: </table> 
+    17: 
+    18: <p>Time now is <%= formatted_time %></p>
+    19: <!-- <p>Time now is <%= Time.now %></p> -->
+  app/helpers/recipes_helper.rb:4:in `formatted_time'
+  app/views/recipes/index.html.erb:18:in `_app_views_recipes_index_html_erb__512874383_37926060__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:16:05 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 315ms
+
+ActionView::Template::Error (undefined method `srftime' for nil:NilClass):
+    16: </table> 
+    17: 
+    18: <p>Time now is <%= Time.now %></p>
+    19: <p>Time now is <%= formatted_time %></p>
+  app/helpers/recipes_helper.rb:4:in `formatted_time'
+  app/views/recipes/index.html.erb:19:in `_app_views_recipes_index_html_erb__512874383_27698700__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:16:41 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 1177ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:17:02 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 889ms
+
+ActionView::Template::Error (undefined method `srftime' for nil:NilClass):
+    16: </table> 
+    17: 
+    18: <p>Time now is <%= Time.now %></p>
+    19: <p>Time now is <%= formatted_time %></p>
+  app/helpers/recipes_helper.rb:4:in `formatted_time'
+  app/views/recipes/index.html.erb:19:in `_app_views_recipes_index_html_erb__512874383_37247580__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:19:20 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 1320ms
+
+ActionView::Template::Error (undefined method `srftime' for 2011-11-06 15:19:21 -0500:Time):
+    17: 
+    18: <p>Time now is <%= Time.now %></p>
+    19: <p>Time now is <%= @time %></p>
+    20: <p>Time now is <%= formatted_time %></p>
+  app/helpers/recipes_helper.rb:3:in `formatted_time'
+  app/views/recipes/index.html.erb:20:in `_app_views_recipes_index_html_erb__512874383_37277868__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:19:59 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 460ms
+
+ActionView::Template::Error (undefined method `srftime' for 2011-11-06 15:20:00 -0500:Time):
+    16: </table> 
+    17: 
+    18: <p>Time now is <%= Time.now %></p>
+    19: <p>Time now is <%= formatted_time %></p>
+  app/helpers/recipes_helper.rb:3:in `formatted_time'
+  app/views/recipes/index.html.erb:19:in `_app_views_recipes_index_html_erb__512874383_37816260__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:20:10 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 1214ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:30:38 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 353ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:30:51 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 934ms
+
+ActionView::Template::Error (undefined method `srftime' for 2011-11-06 15:30:52 -0500:Time):
+    17: 
+    18: <p>Time now is <%= Time.now %></p>
+    19: <p>Time now is <%= @time %></p>
+    20: <p>Time now is <%= formatted_time %></p>
+  app/helpers/recipes_helper.rb:3:in `formatted_time'
+  app/views/recipes/index.html.erb:20:in `_app_views_recipes_index_html_erb__512874383_37435152__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:31:27 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (41.0ms)
+Completed 500 Internal Server Error in 734ms
+
+ActionView::Template::Error (undefined method `include' for #<#<Class:0x2c2fa40>:0x2c28438>):
+    17: 
+    18: <p>Time now is <%= Time.now %></p>
+    19: <p>Time now is <%= @time %></p>
+    20: <% include RecipesHelper %>
+    21: <p>Time now is <%= formatted_time %></p>
+  app/views/recipes/index.html.erb:20:in `_app_views_recipes_index_html_erb__512874383_23126544__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:36:46 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 1524ms
+
+ActionView::Template::Error (undefined method `srftime' for 2011-11-06 15:36:48 -0500:Time):
+    17: 
+    18: <!-- <p>Time now is <%= Time.now %></p> -->
+    19: <p>Time now is <%= @time %></p>
+    20: <!-- <p>Time now is <%= formatted_time %></p> -->
+  app/helpers/recipes_helper.rb:3:in `formatted_time'
+  app/views/recipes/index.html.erb:20:in `_app_views_recipes_index_html_erb__512874383_37966560__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:36:54 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 925ms
+
+ActionView::Template::Error (undefined method `srftime' for 2011-11-06 15:36:55 -0500:Time):
+    17: 
+    18: <!-- <p>Time now is <%= Time.now %></p> -->
+    19: <p>Time now is <%= @time %></p>
+    20: <!-- <p>Time now is <%= formatted_time %></p> -->
+  app/helpers/recipes_helper.rb:3:in `formatted_time'
+  app/views/recipes/index.html.erb:20:in `_app_views_recipes_index_html_erb__512874383_27175080__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-06 15:37:10 -0500
+  Processing by RecipesController#index as HTML
+Rendered recipes/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 1366ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 15:55:03 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (126.0ms)
+Completed 200 OK in 588ms (Views: 165.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 15:55:13 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 565ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 16:00:28 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Completed 500 Internal Server Error in 11ms
+
+SocketError (getaddrinfo: No such host is known. ):
+  app/models/recipe.rb:10:in `for'
+  app/controllers/recipes_controller.rb:4:in `index'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 16:02:48 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 222ms
+
+ActionView::Template::Error (undefined method `srftime' for 2011-11-06 16:02:48 -0500:Time):
+    16: </table> 
+    17: 
+    18: <p>Time now is <%= @time %></p>
+    19: <p>Time now is <%= formatted_time %></p>
+  app/helpers/recipes_helper.rb:3:in `formatted_time'
+  app/views/recipes/index.html.erb:19:in `_app_views_recipes_index_html_erb__512874383_37813884__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 16:04:32 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 274ms
+
+ActionView::Template::Error (undefined method `srftime' for 2011-11-06 16:04:32 -0500:Time):
+    16: </table> 
+    17: 
+    18: <p>Time now is <%= @time %></p>
+    19: <p>Time now is <%= formatted_time %></p>
+  app/helpers/recipes_helper.rb:3:in `formatted_time'
+  app/views/recipes/index.html.erb:19:in `_app_views_recipes_index_html_erb__512874383_37824960__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 16:09:10 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 536ms
+
+ActionView::Template::Error (undefined method `srftime' for 2011-11-06 16:09:10 -0500:Time):
+    16: </table> 
+    17: 
+    18: <p>Time now is <%= @time %></p>
+    19: <p>Time now is <%= formatted_time %></p>
+  app/helpers/recipes_helper.rb:3:in `formatted_time'
+  app/views/recipes/index.html.erb:19:in `_app_views_recipes_index_html_erb__512874383_37824720__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 16:10:56 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 743ms
+
+ActionView::Template::Error (undefined method `srftime' for 2011-11-06 16:10:57 -0500:Time):
+    16: </table> 
+    17: 
+    18: <p>Time now is <%= @time %></p>
+    19: <p>Time now is <%= formatted_time %></p>
+  app/helpers/recipes_helper.rb:3:in `formatted_time'
+  app/views/recipes/index.html.erb:19:in `_app_views_recipes_index_html_erb__512874383_38615796__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 16:11:11 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 702ms
+
+ActionView::Template::Error (undefined method `srftime' for 2011-11-06 16:11:11 -0500:Time):
+    16: </table> 
+    17: 
+    18: <p>Time now is <%= @time %></p>
+    19: <p>Time now is <%= formatted_time %></p>
+  app/helpers/recipes_helper.rb:3:in `formatted_time'
+  app/views/recipes/index.html.erb:19:in `_app_views_recipes_index_html_erb__512874383_27702876__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 16:11:28 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 350ms
+
+ActionView::Template::Error (undefined method `srftime' for 2011-11-06 16:11:28 -0500:Time):
+    16: </table> 
+    17: 
+    18: <p>Time now is <%= @time %></p>
+    19: <p>Time now is <%= formatted_time %></p>
+  app/helpers/recipes_helper.rb:3:in `formatted_time'
+  app/views/recipes/index.html.erb:19:in `_app_views_recipes_index_html_erb__512874383_38335632__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (44.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 16:13:13 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 399ms
+
+ActionView::Template::Error (undefined method `formatted_time' for RecipesHelper:Module):
+    16: </table> 
+    17: 
+    18: <p>Time now is <%= @time %></p>
+    19: <p>Time now is <%= RecipesHelper.formatted_time %></p>
+  app/views/recipes/index.html.erb:19:in `_app_views_recipes_index_html_erb__512874383_27711096__618298019'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 16:16:11 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 693ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 16:17:07 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 913ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 16:18:17 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 264ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 16:18:39 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 199ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?keyword=mocha" for 127.0.0.1 at 2011-11-06 16:19:01 -0500
+  Processing by RecipesController#index as HTML
+  Parameters: {"keyword"=>"mocha"}
+Rendered recipes/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 453ms (Views: 55.0ms | ActiveRecord: 0.0ms)

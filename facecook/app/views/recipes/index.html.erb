@@ -9,10 +9,10 @@
   <% @recipes.each do |rec| %>
     <tr class='<% cycle("even", "odd") %>'>
       <td><%= link_to (image_tag rec["thumbnail"]), rec["href"] %></td>
-      <td><%= link_to rec["title"], rec["href"] %></td>
-      <td><%= rec["ingredients"] %></td>
+      <td><%= link_to sanitize(rec["title"]), rec["href"] %></td>
+      <td><%= sanitize(rec["ingredients"]) %></td>
     </tr>
   <% end %>
 </table> 
 
-<p>Time now is <%= Time.now %></p>
+<p>Time now is <%= @time %>  (<%= formatted_time %>)</p>
