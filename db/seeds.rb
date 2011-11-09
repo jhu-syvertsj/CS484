@@ -26,4 +26,4 @@ User.first.todo_lists.first.todo_items << TodoItem.create([{ task_title: "First 
 User.first.todo_lists.first.todo_items << TodoItem.create([{ task_title: "Second Task", description: "Somewhat harder task.", due_date: Date.parse("09/01/2012") }])
 
 User.first.todo_lists.first.todo_items.first.tags << Tag.create([{ tag_name: "Test Tag 1" }, { tag_name: "Test Tag 2" }, { tag_name: "Test Tag 3" }])
-User.first.todo_lists.first.todo_items.last.tags << Tag.create([{ tag_name: "Family" }, { tag_name: "Business" }])
+User.first.todo_lists.first.todo_items.last.tags << User.first.todo_lists.first.todo_items.first.tags
