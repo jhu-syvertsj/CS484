@@ -1,0 +1,139 @@
+
+Create new rails project:
+  # rails new advanced_ar
+
+  # cd advanced_ar 
+
+(not necessary for this): Bundle gems for project:
+  # bundle 
+
+Generate database tables using scaffolding:
+  # rails generate scaffold user login:string password:string
+  # rails generate scaffold account gender:string age:integer first_name:string last_name:string user:references
+  # rails generate scaffold todolist list_name:string list_due_date:string todoitem(s)
+  # rails generate scaffold todoitem due_date:string task_title:string description:string
+  # rails generate scaffold tag tag_name:string
+  # rails generate migration create_todoItems_tags
+
+Create model attributes:
+  (manually add these to the models?)
+ 
+A "migration" is for either changing attributes of records or perhaps porting 
+  from one dbms to another.
+
+Create "migration" script (ie:)
+  # rake generate migration change_something_from_int_to_string
+
+(This changes the attributes of the specified table.)
+
+Propagate attributes to model and database:
+  # rake db:migrate
+
+Populate table(s) with data:
+  (manually do this from web interface)
+  (note: the log/development.log will show passwords in plain text)
+
+Database console 
+  # rails db
+
+SQLite Queries
+  > .help
+  > .databases
+  > .tables
+  > .dump [table]
+  > .headers on
+  > .mode columns
+  > select * from [table];
+  > .quit
+
+Viewing database:
+  # rails server
+  http://localhost:3000/[table]
+
+The model generator can be used instead of scaffolding. This should also generate a migration.
+The migration file is prefixed by a timestamp. It has two methods: 'up' and 'down', which 
+correspond to adding and dropping database tables and elements.
+  # rails generate model user login:string password:string
+  # rails generate model account gender:string age:integer first_name:string last_name:string
+  # rails generate model todolist list_name:string list_due_date:string todoitem(s)
+  # rails generate model todoitem due_date:string task_title:string description:string
+  # rails generate model tag tag_name:string
+
+In order to view this on a webpage, 'rake db:migrate' must be run. This actually creates the 
+database tables. 
+  # rake db:migrate
+  # rails server (only to view content on browser)
+
+This will not be enough. The following will need to be added:
+  - routing: [root]/config/routes.rb will need "resources :[table]" for each table added
+  - controller for each model (this is generated using scaffolding)
+
+*(so, for now, the moral of the story is to use 'scaffold')
+
+Rails console: (like irb and 'rails db')
+  # rails console
+  > User.column_names
+
+Reload database after updates:
+  > reload!
+
+Populate database with initial data:
+  # rake db:seed 
+  (creates model class methods to 'create' data, but which are commented)
+
+Keys
+
+Foreign key belongs to class/table which "belongs to" another.
+Add [table]:references" at end of either scaffold or model generation (ie:)
+  # rails generate scaffold account [attributes:types...] user:references
+
+One-to-One Association:
+'has_one'    - ie: User    ... 'has_one :account'
+'belongs_to' - ie: Account ... 'belongs_to :user'
+
+One-to-Many Association:
+'belongs_to' - ie: TodoItem ... 'belongs_to :todolist'
+'has_many'   - ie: TodoList ... 'has_many :todoitems'
+
+Many-to-Many Association:
+'has_and_belongs_to_many' - ie: TodoItem ... 'has_and_belongs_to_many :tags'
+'has_and_belongs_to_many' - ie: Tag ... 'has_and_belongs_to_many :todoitems'
+
+
+
+
+== Project Steps ==
+
+generate project
+  # rails new todos
+  # cd todos
+
+generate ActiveRecord models
+  # rails generate model user login:string password:string
+  # rails generate model account gender:string age:integer first_name:string last_name:string user:references
+  # rails generate model todolist list_name:string list_due_date:string user:references
+  # rails generate model todoitem due_date:string task_title:string description:string todolist:references
+  # rails generate model tag tag_name:string 
+generate migration for 'join'
+  # rails generate migration create_todoitems_tags todoitem:references tag:references
+    --> this creates db/migrate/[timestamp]_create_todoitems_tags.rb, which much be edited to support
+    associations
+migrate models to database tables
+  # rake db:migrate
+
+create associations to the following models: User, Account, ToDoList, ToDoItems, Tag
+  User     -- has_one :account
+  User     -- has_many :todolist
+  Account  -- belongs_to :user
+  Todolist -- belongs_to :user
+  Todolist -- has_many :todoitem
+  Todoitem -- belongs_to :todolist
+  Todoitem -- has_and_belongs_to_many :tag
+  Tag      -- has_and_belongs_to_many :todoitems
+
+association for 'join' table (no model):
+  db/migrate/[date]_todoitems_tags
+
+seed data for databases
+  (edit db/seeds.rb adding data to populate records)
+  # rake db:seed

@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-TodoListApp::Application.config.secret_token = 'a82be5d150d0414c3cb7a1a3da3642d3c05552d96813f201511471b2c67eaa50224e3f6411f8d90aca0261467a5a9b3fa49d6df9b25840242b8a3c4aa7afb4fc'
+Todos::Application.config.secret_token = 'd5cc2838038c86e087df77f94a4b25b97b72ef9af9c68adf44be8fb5130ea9244d0756290a0e2548fd00f4e749dcf3e940e33dfdada5806c7fbc4e6bf4d49808'

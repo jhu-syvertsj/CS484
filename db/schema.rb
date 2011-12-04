@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111102221633) do
+ActiveRecord::Schema.define(:version => 20111129062321) do
 
   create_table "accounts", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
     t.string   "gender"
     t.integer  "age"
+    t.string   "first_name"
+    t.string   "last_name"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -29,23 +29,23 @@ ActiveRecord::Schema.define(:version => 20111102221633) do
     t.datetime "updated_at"
   end
 
-  create_table "tags_todo_items", :id => false, :force => true do |t|
+  create_table "tags_todoitems", :id => false, :force => true do |t|
+    t.integer "todoitem_id"
     t.integer "tag_id"
-    t.integer "todo_item_id"
   end
 
-  create_table "todo_items", :force => true do |t|
+  create_table "todoitems", :force => true do |t|
+    t.string   "due_date"
     t.string   "task_title"
     t.string   "description"
-    t.date     "due_date"
-    t.integer  "todo_list_id"
+    t.integer  "todolist_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "todo_lists", :force => true do |t|
+  create_table "todolists", :force => true do |t|
     t.string   "list_name"
-    t.date     "list_due_date"
+    t.string   "list_due_date"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

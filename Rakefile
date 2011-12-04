@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-TodoListApp::Application.load_tasks
+Todos::Application.load_tasks

@@ -1,29 +1,52 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Daley', :city => cities.first)
 
-Tag.delete_all
-TodoItem.delete_all
-TodoList.delete_all
-Account.delete_all
+# reset:
 User.delete_all
+Account.delete_all
+Todoitem.delete_all
+Todolist.delete_all
+Tag.delete_all
 
-User.create [
-  {login: "doejo", password: "password1", account: Account.create({first_name: "John", last_name: "Doe", age: 29, gender: "male"})},
-  {login: "doeja", password: "password2", account: Account.create({first_name: "Jane", last_name: "Doe", age: 28, gender: "female"})}
-]
+puts " - table data cleared"
 
-User.first.todo_lists << TodoList.create([{ list_name: "Third List", list_due_date: Date.parse("01/11/2012") }])
-User.first.todo_lists << TodoList.create([{ list_name: "Second List", list_due_date: Date.parse("10/10/2012") }])
-User.first.todo_lists << TodoList.create([{ list_name: "First List", list_due_date: Date.parse("11/09/2012") }])
+# populate user table (works):
+#User.create([ { :login => "sophia", :password => "imcute" } ])
+#User.create([ { :login => "wayne.newton", :password => "ilovelasvegas" } ])
+#puts " - User table populated"
 
-User.first.todo_lists.first.todo_items << TodoItem.create([{ task_title: "Third Task", description: "This task is nearly impossible!", due_date: Date.parse("10/01/2012") }])
-User.first.todo_lists.first.todo_items << TodoItem.create([{ task_title: "First Task", description: "Really easy task.", due_date: Date.parse("08/01/2012") }])
-User.first.todo_lists.first.todo_items << TodoItem.create([{ task_title: "Second Task", description: "Somewhat harder task.", due_date: Date.parse("09/01/2012") }])
+# populate account table (works, but not the right solution):
+#Account.create([ { :gender => "female", :age => 1, :first_name => "Sophia",  :last_name => "Syvertsen" } ])
+#puts " - Accounts table populated"
 
-User.first.todo_lists.first.todo_items.first.tags << Tag.create([{ tag_name: "Test Tag 1" }, { tag_name: "Test Tag 2" }, { tag_name: "Test Tag 3" }])
-User.first.todo_lists.first.todo_items.last.tags << User.first.todo_lists.first.todo_items.first.tags
+# append account to user table (fails):
+#User.first.account << Account.first
+#puts " - Accounts table appended to Users table"
+# note: this probably fails because the account has a one-to-one association with the user
+
+# populate user table and accounts with todolist (fails):
+#User.create([ { :login => "sophia", :password => "imcute", :account => Account.create({ :gender => "female", :age => 1, :first_name => "Sophia",  :last_name => "Syvertsen" }), :todolist => Todolist.create({ :list_name => "sophia daily list", :list_due_date => "11/11/11" }) } ])
+#puts " - User table and accounts populated with todolist"
+# note: this fails because the todolist has a many-to-one association with user,
+# as opposed to account, which is one-to-one with user.
+
+# populate user table and accounts (works):
+User.create([ { :login => "sophia", :password => "imcute", :account => Account.create({ :gender => "female", :age => 1, :first_name => "Sophia",  :last_name => "Baby" }) } ])
+User.create([ { :login => "wayne.newton", :password => "lovevegas", :account => Account.create({ :gender => "male", :age => 71, :first_name => "Wayne",  :last_name => "Newton" }) } ])
+puts " - User table and accounts populated"
+
+# populate todolist table (works):
+User.first.todolists << Todolist.create([ { :list_name => "baby daily list", :list_due_date => "11/11/11" } ]) 
+User.first.todolists << Todolist.create([ { :list_name => "family visit", :list_due_date => "12/05/11" } ])
+User.last.todolists  << Todolist.create([ { :list_name => "waynes list", :list_due_date => "12/12/12" } ])
+puts " - Todolist table populated"
+
+# add todoitems to todolist
+User.first.todolists.first.todoitems << Todoitem.create([ { :task_title => "Cry at night", :description => "this is every night", due_date: "11/11/11" } ])
+User.first.todolists.first.todoitems << Todoitem.create([ { :task_title => "Visit grandparents", :description => "visit grandparents", due_date: "12/05/11" } ])
+User.last.todolists.first.todoitems  << Todoitem.create([ { :task_title => "Sell tickets", :description => "sell tickets for concert", due_date: "12/01/11" } ])
+puts " - Todoitems table populated and added to Todolists"
+
+# add tags to todoitems
+User.first.todolists.first.todoitems.first.tags << Tag.create([ { :tag_name => "Baby Activity" }, { :tag_name => "Sophia's Daily Activities" } ])
+#User.first.todolists.last.todoitems.first.tags  << Tag.create([ { :tag_name => "Family Visit" } ])
+User.last.todolists.first.todoitems.first.tags  << Tag.create([ { :tag_name => "Performance" } ])
+puts " - Tags table populated and added to Todoitems"
