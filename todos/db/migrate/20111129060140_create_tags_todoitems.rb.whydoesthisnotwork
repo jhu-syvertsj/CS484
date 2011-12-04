@@ -1,0 +1,12 @@
+class CreateTagsTodoitems < ActiveRecord::Migration
+  def self.up
+    create_table :tags_todoitems, id: false do |t|
+      t.references :tag
+      t.references :todoitem
+    end
+  end
+
+  def self.down
+    drop_table :tags_todoitems
+  end
+end
